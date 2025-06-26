@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Home | Simple Site</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to right, #4facfe, #00f2fe);
+      color: #fff;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+      text-shadow: 1px 1px 2px #000;
+    }
+
+    p {
+      font-size: 1.2em;
+      margin-bottom: 30px;
+    }
+
+    button {
+      padding: 15px 30px;
+      font-size: 1em;
+      margin: 10px;
+      background-color: #ffffff;
+      color: #333;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    button:hover {
+      background-color: #f1f1f1;
+      transform: scale(1.05);
+    }
+
+    footer {
+      position: absolute;
+      bottom: 10px;
+      font-size: 0.9em;
+      color: #e0e0e0;
+    }
+  </style>
+</head>
+<body>
+
+  <h1 id="welcomeHeading">Welcome!</h1>
+  <p>Click a button to continue</p>
+
+  <button onclick="goToForm()">Go to Form</button>
+  <button onclick="goToContact()">Contact Us</button>
+
+  <footer>&copy; 2025 Your Company</footer>
+
+  <script>
+    // Ask user for the name of their business
+    const businessName = prompt("What is the name of your business?");
+    if (businessName) {
+      document.getElementById("welcomeHeading").innerText = `Welcome to ${businessName}!`;
+    }
+
+    function goToForm() {
+      window.location.href = "form.html";
+    }
+
+    function goToContact() {
+      window.location.href = "contact.html";
+    }
+  </script>
+</body>
+</html>
