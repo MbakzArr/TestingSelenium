@@ -111,6 +111,12 @@
       if (document.getElementById("billing").checked) departments.push("Billing");
 
       const resultHTML = `
+        <div class="container py-5 text-center">
+          <div class="alert alert-success shadow">
+            <h2> Thank You!</h2>
+            <p>Your message has been successfully submitted.</p>
+          </div>
+        </div>
         <p><strong>Full Name:</strong> ${fullname}</p>
         <p><strong>Email:</strong> ${email}</p>
         <p><strong>Subject:</strong> ${subject}</p>
